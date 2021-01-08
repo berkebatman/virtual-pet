@@ -26,4 +26,11 @@ How to use:
             if both of the above are true, it should return 'I am hungry AND I need a walk'
             if neither of the above are true, it should return 'I feel great!'
 
-    9)
+    9) Your pet will die if not looked after. isAlive() function will check whether the pet is alive. See conditions below:
+
+            if the pet's fitness is 0 or less, it should return false.
+            if the pet's hunger is 10 or more, it should return false.
+            if the pet's age is 30 or more, it should return false.
+            otherwise it should return true.
+
+        Further notes on isAlive() => we usually want ocbject methods perform an action on the object isAlive() is inherently different from that behaviour. We use 'getter method' to establish this type of objects.

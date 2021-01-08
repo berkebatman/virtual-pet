@@ -8,6 +8,20 @@ function Pet (name) {
     this.fitness = 10
 }
 
+Pet.prototype = {
+    get isAlive() {
+   if (this.fitness <= 0) {
+       return false;
+   } else if (this.hunger >= 10) {
+       return false;
+   } else if (this.age >= 30) {
+       return false;
+   } else {
+       return true;
+   }
+}
+}
+
 Pet.prototype.growUp = function(years) {
     this.age = this.age + years;
     this.hunger = this.hunger + years*(5);
@@ -49,17 +63,9 @@ Pet.prototype.checkUp = function() {
 //if the pet's hunger is 10 or more, it should return false.
 //if the pet's age is 30 or more, it should return false.
 //otherwise it should return true.
- Pet.prototype.isAlive = function() {
-    if (this.fitness <= 0) {
-        return false;
-    } else if (this.hunger >= 10) {
-        return false;
-    } else if (this.age >= 30) {
-        return false;
-    } else {
-        return true;
-    }
-}
+
+
+
 
 // // Buy Rex and look after thim for 1 year.
 // let rex = new Pet('Rex');
