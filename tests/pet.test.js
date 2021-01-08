@@ -12,6 +12,8 @@ describe('constructor', () => {
         expect(new Pet('Fido')).toEqual({
             name: 'Fido',
             age: 0,
+            hunger: 0,
+            fitness: 10,
         });
     });
 });
@@ -31,6 +33,16 @@ describe('constructor', () => {
         testPet.growUp(2)
         testPet.growUp(3);
         expect(testPet.age).toBe(6);
+    });
+});
+
+
+describe('constructor', () => {
+    it('it should check whether the pets health impairs when it gets older', () => {
+        let testPet = new Pet('Test Pet')
+        testPet.growUp(1)
+        expect(testPet.hunger).toBe(-5);
+        expect(testPet.fitness).toBe(7)
     });
 });
 
