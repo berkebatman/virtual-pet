@@ -15,6 +15,14 @@ Pet.prototype.growUp = function(years) {
     return 
 }
 
+const maxFitness = 10
+Pet.prototype.walk = function() {
+    this.fitness = this.fitness + 4; 
+        this.fitness > maxFitness ? this.fitness = maxFitness : this.fitness;
+    return 
+}
+    
+
 // Buy Rex and look after thim for 1 year.
 let rex = new Pet('Rex');
 const rexOldYear = 1;
@@ -22,6 +30,8 @@ rex.growUp(rexOldYear);
 console.log(rex.age); // Rex is one year old.
 console.log(rex.hunger); // hunger = -5
 console.log(rex.fitness); //  fintess = 7
+rex.walk();
+console.log(rex.fitness)
 
 // Buy ronda and look after her for 1year.
 let ronda = new Pet('Ronda');
@@ -29,7 +39,9 @@ const rondaOldYear = 2;
 ronda.growUp(rondaOldYear); 
 console.log(ronda.age);// Ronda is 2 years old.
 console.log(ronda.hunger); // hunger = -10
-console.log(ronda.fitness); //  fintess = 4
+console.log(ronda.fitness); //  fitness = 4
+ronda.walk();
+console.log(ronda.fitness);
 
 // Exports
 module.exports = {

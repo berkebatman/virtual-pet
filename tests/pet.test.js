@@ -18,14 +18,6 @@ describe('constructor', () => {
     });
 });
 
-//// This is suggested by manchester codes; the same functionality is being tested in the a
-// it('has a initial age of 0', () => {
-//     const pet = new Pet('Fido');
-
-//     expect(pet.age).toEqual(0);
-//   });
-// })
-
 describe('constructor', () => {
     it('it should check wheater the pet grows, even when the grow up function', () => {
         let testPet = new Pet('Test Pet')
@@ -36,13 +28,29 @@ describe('constructor', () => {
     });
 });
 
-
 describe('constructor', () => {
     it('it should check whether the pets health impairs when it gets older', () => {
         let testPet = new Pet('Test Pet')
-        testPet.growUp(1)
-        expect(testPet.hunger).toBe(-5);
-        expect(testPet.fitness).toBe(7)
+        testPet.growUp(2)
+        expect(testPet.hunger).toBe(-10);
+        expect(testPet.fitness).toBe(4)
+    });
+});
+
+describe('walk', () => {
+    it('it should check whether fitness increases by 4, with a max of 10', () => {
+        let testPet = new Pet('Test Pet');
+        testPet.walk();
+        let result = testPet.fitness
+        expect(result).toBe(10);
+        testPet.growUp(1);
+        testPet.walk();
+        let result2 = testPet.fitness
+        expect(result2).toBe(10);
+        testPet.growUp(2);
+        testPet.walk();
+        let result3 = testPet.fitness;
+        expect(result3).toBe(8);
     });
 });
 
