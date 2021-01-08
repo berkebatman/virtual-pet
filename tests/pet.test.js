@@ -87,5 +87,23 @@ describe('checkUp', () => {
     });
 });
 
+describe('isAlive', () => {
+    it('it should whether the pet is alive, return false if dead', () => {
+        let testPet = new Pet('Test Pet');
+        expect(testPet.isAlive()).toBe(true);
+        testPet.growUp(2);
+        expect (testPet.isAlive()).toBe(false);
+        testPet.feed();
+        expect (testPet.isAlive()).toBe(true);
+        testPet.growUp(2);
+        testPet.feed();
+        testPet.feed();
+        testPet.feed();
+        expect (testPet.isAlive()).toBe(false);
+        testPet.walk();
+        expect (testPet.isAlive()).toBe(true);
+    });
+});
+
 
 
