@@ -1,9 +1,8 @@
-
-function Pet (color, legs) {
-    this.color = color
-    this.legs = legs
-  }
-
+function Pet (name) {
+    this.name = name
+}
+  
+  
 // Exports
 module.exports = {
     Pet,
