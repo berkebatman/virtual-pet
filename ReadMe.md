@@ -17,4 +17,13 @@ How to use:
     GOODNEWS! YOU CAN HELP YOUR PET BE HEALTHIER.
     6) When you walk the pet by using the walk() prototype function, its fitness will increase by +4. Maximum fitness level a pet can have is +10. 
 
-    7) When you feed the pet by using feed() prototype function, its hunger level will decrease by 3. Minumum huger level a pet can have is 0. 
+    7) When you feed the pet by using feed() prototype function, its hunger level will decrease by -3. Minumum huger level a pet can have is 0. 
+
+    8) Check your pet's condition by using the checkUp() function. If your pet needs anything, it will tell you. It is programmed as below: 
+
+            if the pet's fitness is 3 or less, it should return 'I need a walk'
+            if the pet's hunger is 5 or more, it should return 'I am hungry'
+            if both of the above are true, it should return 'I am hungry AND I need a walk'
+            if neither of the above are true, it should return 'I feel great!'
+
+    9)
