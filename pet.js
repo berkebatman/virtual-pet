@@ -10,7 +10,7 @@ function Pet (name) {
 
 Pet.prototype.growUp = function(years) {
     this.age = this.age + years;
-    this.hunger = this.hunger - years*(5);
+    this.hunger = this.hunger + years*(5);
     this.fitness = this.fitness - years*(3); 
     return 
 }
@@ -21,7 +21,6 @@ Pet.prototype.walk = function() {
         this.fitness > maxFitness ? this.fitness = maxFitness : this.fitness;
     return 
 }
-    
 
 // Buy Rex and look after thim for 1 year.
 let rex = new Pet('Rex');

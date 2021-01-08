@@ -32,7 +32,7 @@ describe('constructor', () => {
     it('it should check whether the pets health impairs when it gets older', () => {
         let testPet = new Pet('Test Pet')
         testPet.growUp(2)
-        expect(testPet.hunger).toBe(-10);
+        expect(testPet.hunger).toBe(10);
         expect(testPet.fitness).toBe(4)
     });
 });
