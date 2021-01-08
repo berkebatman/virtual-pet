@@ -8,10 +8,31 @@ describe('constructor', () => {
 });
 
 describe('constructor', () => {
-    it('should return an object with a name property assgined', () => {
+    it('should return a pet thats 0yrs old and assign a name to it', () => {
         expect(new Pet('Fido')).toEqual({
             name: 'Fido',
+            age: 0,
         });
     });
 });
+
+//// This is suggested by manchester codes; the same functionality is being tested in the a
+// it('has a initial age of 0', () => {
+//     const pet = new Pet('Fido');
+
+//     expect(pet.age).toEqual(0);
+//   });
+// })
+
+describe('constructor', () => {
+    it('it should check wheater the pet grows, even when the grow up function', () => {
+        let testPet = new Pet('Test Pet')
+        testPet.growUp(1)
+        testPet.growUp(2)
+        testPet.growUp(3);
+        expect(testPet.age).toBe(6);
+    });
+});
+
+
 
