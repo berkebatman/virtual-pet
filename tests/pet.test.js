@@ -23,7 +23,8 @@ describe('growUp', () => {
         let testPet = new Pet('Test Pet');
         testPet.growUp(1);
         expect(testPet.age).toBe(1);
-        testPet.growUp(1);
+        testPet.age = 0;
+        testPet.growUp(2);
         expect(testPet.age).toBe(2);
     });
 });
@@ -78,11 +79,11 @@ describe('feed', () => {
     });
 
     it('throws an error if the pet is not alive', () => {
-        const pet = new Pet('Fido');
+        let testPet = new Pet('Test Pet');
   
-        pet.hunger = 10;
+        testPet.hunger = 10;
   
-        expect(() => pet.feed()).toThrow('Your pet is no longer alive :(');
+        expect(() => testPet.feed()).toThrow('Your pet is no longer alive :(');
     });
 });
 
@@ -108,11 +109,11 @@ describe('checkUp', () => {
     });
 
     it('throws an error if the pet is not alive', () => {
-        const pet = new Pet('Fido');
-        pet.hunger = 10;
-        pet.fitness = 0;
-        pet.age = 30;
-        expect(() => pet.feed()).toThrow('Your pet is no longer alive :(');
+        const testPet = new Pet('Test Pet');
+        testPet.hunger = 10;
+        testPet.fitness = 0;
+        testPet.age = 30;
+        expect(() => testPet.feed()).toThrow('Your pet is no longer alive :(');
     });
 });
 

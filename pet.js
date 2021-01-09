@@ -74,15 +74,6 @@ Pet.prototype.checkUp = function() {
       }   
  }
 
- ///test
- let testPet = new Pet('Test Pet');
-   
-   testPet.fitness = 10;
-   testPet.hunger = 0;
-   console.log(testPet.checkUp())
-
-
-
 // // Buy Rex and look after thim for 1 year.
 // let rex = new Pet('Rex');
 // const rexOldYear = 1;
