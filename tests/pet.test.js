@@ -92,7 +92,7 @@ describe('feed', () => {
 // if both of the above are true, it should return 'I am hungry AND I need a walk'
 // if neither of the above are true, it should return 'I feel great!'
 describe('checkUp', () => {
-   it('it should check whether the pet needs anything', () => {
+   it('should check whether the pet needs anything', () => {
         let testPet = new Pet('Test Pet');
         testPet.fitness = 2;
         testPet.hunger = 0;

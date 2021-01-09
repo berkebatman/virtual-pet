@@ -18,11 +18,9 @@ Pet.prototype = {
        return false;
    } else {
        return true;
-}
-}
-}
+}}}
 
-Pet.prototype.growUp = function(years) {
+Pet.prototype.growUp = function(years = 1) {
     if (!this.isAlive) {
         throw  ('Your pet is no longer alive :(');
     }
@@ -57,22 +55,22 @@ Pet.prototype.feed = function() {
 // if both of the above are true, it should return 'I am hungry AND I need a walk'
 // if neither of the above are true, it should return 'I feel great!'
 Pet.prototype.checkUp = function() {
-    if (!this.isAlive) {
+        if (!this.isAlive) {
         return 'Your pet is no longer alive :('
-    }
+        }
       if (this.fitness <= 3 && this.hunger >= 5) {
           return 'I am hungry AND I need a walk!';
-      } 
+        } 
        if (this.fitness > 3 && this.hunger < 5) {
           return 'I feel great!';
-      } 
+        } 
        if (this.fitness <= 3) {
           return 'I need a walk!';
-     } 
+        } 
         if (this.hunger >= 5) {
           return 'I am hungry!';
-      }   
- }
+        }   
+}
 
 // // Buy Rex and look after thim for 1 year.
 // let rex = new Pet('Rex');

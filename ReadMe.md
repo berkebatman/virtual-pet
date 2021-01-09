@@ -8,7 +8,7 @@ Pet and its Functionalities:
 
     2) To add a method to the function constoctor i.e. the prototype: Pet.prototype.myNewMethod =  function  () { //do somethig;}
 
-    3) Pet.prototype.growUp(n) will grow the age of your pet by n years. For every pet year grown, your pet's health is impaired. Fitness decreases by 3 while hunger increases by 5. 
+    3) Pet.prototype.growUp(n) will grow the age of your pet by n years. For every pet year grown, your pet's health is impaired. Fitness decreases by 3 while hunger increases by 5. When the growUp method of the pet.prototype has not been passed a variable, it will assume the pet will grow by 1 year by default. 
     
     6) When you walk the pet by using the walk() prototype function, its fitness will increase by +4. Maximum fitness level a pet can have is +10. 
 
@@ -31,3 +31,6 @@ Pet and its Functionalities:
         Further notes on isAlive() => we usually want ocbject methods perform an action on the object isAlive() is inherently different from that behaviour. We use 'getter method' to establish this type of objects.
 
     10) Added guard clauses: if the pet is dead t   he walk, feed, checkUp functions will return 'You pet is dead :('
+
+    TO ADD: 
+    Add a functionality so taht the pet can have children
